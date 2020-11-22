@@ -7,7 +7,7 @@
 * HTML
 * CSS
 * JS
-* PHP
+* PHP version 5.3 or greater
 
 ### Functionality ###
 * Checks if the given string is a Palindrome
