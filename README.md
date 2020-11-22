@@ -59,7 +59,9 @@ $ git clone https://github.com/kirin2/Zigzag-Gengo-Solutions-Engineer-Test.git
 
 5.open you favorite browser and go to <a href="http://local.palindrome">local.palindrome</a>
 
+###  Screenshot ###
 
+![ScreenShot](img/sample_ss.JPG)
 
 
 
