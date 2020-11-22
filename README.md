@@ -6,7 +6,7 @@
 ### Web Technologies ###
 * HTML
 * CSS
-* JS
+* jQuery version 3.4.1
 * PHP version 5.3 or greater
 
 ### Functionality ###
