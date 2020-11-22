@@ -59,7 +59,7 @@ $ git clone https://github.com/kirin2/Zigzag-Gengo-Solutions-Engineer-Test.git
 	
 </VirtualHost>
 ```
-4. Restart your apache
+4. Restart your apache services
 
 5. Open you favorite browser and go to <a href="http://local.palindrome">local.palindrome</a>
 
