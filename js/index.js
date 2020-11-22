@@ -29,6 +29,8 @@ var Index = {
 
                 $("#p-lvl2").text(mRes.lvl2);
 
+                 $("#p-lvl3").text(mRes.lvl3);
+
 
             }catch(mErr){
 
