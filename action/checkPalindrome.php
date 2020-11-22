@@ -7,7 +7,9 @@
 require_once "../class/Palindrome.php";
 
 
-$sPalString = isset($_REQUEST["str"]) ? $_REQUEST["str"] : "" ;
+$sPalString = isset($_REQUEST["str"]) ? strtoupper($_REQUEST["str"]) : "" ;
+
+$sPalString = str_ireplace(" ", "", $sPalString);
 
 
 $bLvl1 = Palindrome::isPalindrome($sPalString);

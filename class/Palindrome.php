@@ -21,7 +21,7 @@ class Palindrome
 
             $bRes = true;
 
-        }
+        }//end if
 
         return $bRes;
 
@@ -29,7 +29,7 @@ class Palindrome
     /**
     * This function get the longest palendromic substring
     *@param user input string
-    *@return [boolean] [initialize self]
+    *@return [string] [longest Palindrome]
     */
     public static function getLongestPal($sPalString)
     {
@@ -59,18 +59,22 @@ class Palindrome
                         $sLongPal = $sPal;
 
                         $iLongPalLen = $sTempLen;
-                    }
+                    }//end if
 
-                }
+                }//end if
 
-            }
+            }//end foreach
 
-        }
+        }//end foreach
 
         return $sLongPal;
 
     }
-
+    /**
+    * This function get the longest palendromic substring
+    *@param user input string
+    *@return [string] [longest Palindrome]
+    */
     public static function getMinCutPal($sPalString)
     {
 
@@ -111,8 +115,10 @@ class Palindrome
                     $sTempStrPal = implode("", $aTempPalStr);
 
                     continue;
-                }
-            }
+
+                }//end if
+
+            }//end for
 
             if($bFoundPal == false){
 
@@ -121,9 +127,9 @@ class Palindrome
                 array_splice($aTempPalStr, $iStart,1);
 
                 $sTempStrPal = implode("", $aTempPalStr);
-            }
+            }//end if
 
-        }
+        }//end while
 
 
         $sOutput = count($aPalindrome) - 1 . " // " . implode(" | ",$aPalindrome);
