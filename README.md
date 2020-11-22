@@ -24,17 +24,21 @@ This guide assumes you used window server and  have text editor , git, apache we
 
 - GIT         : https://git-scm.com/downloads
 
-1. get source code using git
+1. Get source code using git
 
 ```
 $ git clone https://github.com/kirin2/Zigzag-Gengo-Solutions-Engineer-Test.git
 ```
-2 . Add in your windows Host file.Replace with the correct location depending on your setup.
+
+2. Add in your windows Host file.Replace with the correct location depending on your setup.
 * {Your local drive}\Windows\System32\drivers\etc\host
+
 ```
 127.0.0.1 local.palindrome
 ```
+
 3. Add apache vhost. Replace with the correct location depending on your setup.
+
 * {Your local drive}\{Your Apache Folder}\conf\extra\httpd-vhosts.conf
 ```
 <VirtualHost *:80>
