@@ -8,9 +8,10 @@
 class Palindrome 
 {   
     /**
-    *@return [object] [initialize self]
+    *This function checks if $sPalString is a Palindrome
+    *@param user input string
+    *@return [boolean] [initialize self]
     */
-
     public static function isPalindrome($sPalString)
     {
 
@@ -25,7 +26,11 @@ class Palindrome
         return $bRes;
 
     }
-
+    /**
+    * This function get the longest palendromic substring
+    *@param user input string
+    *@return [boolean] [initialize self]
+    */
     public static function getLongestPal($sPalString)
     {
 
@@ -63,6 +68,68 @@ class Palindrome
         }
 
         return $sLongPal;
+
+    }
+
+    public static function getMinCutPal($sPalString)
+    {
+
+        $aStrPal = str_split($sPalString);
+
+        $aPalindrome = array();
+
+        $aTempPalStr = $aStrPal;
+
+        $sTempStrPal  = $sPalString;
+
+        $sOutput = "";
+
+
+        while ( empty($aTempPalStr) == false) {
+           
+            $iStart = 0 ;
+
+            $bFoundPal = false;
+
+            for($i= 0 ; $i < count($aTempPalStr); $i++ ){
+
+                $iLSub = $i+1 ;
+
+                $sPal = substr($sTempStrPal, $iStart,$iLSub) ;
+
+                //skip checking 1 char
+                if( $iLSub == 1){ continue; }
+
+                if(self::isPalindrome($sPal) == true ){
+
+                    $bFoundPal = true;
+
+                    array_push($aPalindrome, $sPal);
+
+                    array_splice($aTempPalStr, $iStart,$iLSub);
+
+                    $sTempStrPal = implode("", $aTempPalStr);
+
+                    continue;
+                }
+            }
+
+            if($bFoundPal == false){
+
+                array_push($aPalindrome, $aTempPalStr[0] ) ;
+
+                array_splice($aTempPalStr, $iStart,1);
+
+                $sTempStrPal = implode("", $aTempPalStr);
+            }
+
+        }
+
+
+        $sOutput = count($aPalindrome) - 1 . " // " . implode(" | ",$aPalindrome);
+
+        return $sOutput ;
+
 
     }
 
